@@ -1,0 +1,164 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    font-family: 'Press Start 2P', sans-serif;
+    --primary-color: #ff00bb;    
+    --secondary-color: #0cf4ec;  
+    --accent-color: #4D4DFF;     
+    --background-color: #08081A; 
+    --surface-color: #12122A;    
+    --text-color: #FFFFFF; 
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+
+body{
+    background:             
+    linear-gradient(135deg, #cc007d, #099fa3, #2D2DFF),
+    linear-gradient(135deg, rgba(127, 90, 240, 0.15), rgba(44, 182, 125, 0.15), rgba(255, 142, 60, 0.15));
+    background-repeat: no-repeat;
+    background-size: 200% 200%;
+    background-attachment: fixed;
+    height: 100vh;
+    animation: gradient-animation 8s ease infinite;
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+nav{
+    display: flex;
+    justify-content: flex-start;
+    height: 12vh;
+    background: linear-gradient(135deg, #08081A, #12122A);
+    opacity: .9;
+    align-items: center;
+    border-bottom: 5px solid #0a0a0a; 
+    padding: 15px 20px; 
+    margin: 10px 10px;
+    border-radius: 8px;
+    transform: translate(0px);
+    transition: .3s ;
+}
+
+nav:hover{
+    transform: translate(10px);
+}
+
+.navLinks{
+    padding: 25px;
+    display: flex;
+    gap: 3rem;
+    font-size: large;
+}
+
+
+.navBar a{
+    color: var(--primary-color);
+    display: flex;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.navBar a:hover{
+    color: var(--secondary-color);
+    display: flex;
+    margin: 10px;
+    text-decoration: underline;
+    transform: scale(1.5);
+    transition: .2s ease-in-out;
+}
+
+
+li{
+    list-style: none;
+    position: relative;
+    color: var(--secondary-color);
+}
+
+
+.main{
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#arcade {
+    font-size: clamp(2rem, 10vw, 12rem);
+    font-family: 'Monoton', cursive;
+    text-align: center;
+    background-clip: text;
+    color: white;
+    margin-bottom: 240px;
+    text-shadow: 0 0 20px rgba(49, 181, 246, 0.5);
+    white-space: nowrap;
+}
+
+
+.fade-in{
+    animation: fade-in .5s ease-in forwards;
+}
+
+
+
+@keyframes fade-in {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fade-out{
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+@media (max-width: 768px) {
+    #arcade {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #arcade {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1100px) {
+    #arcade {
+        font-size: 8rem;
+        white-space: nowrap;
+    }
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+#github a{
+    text-decoration: none;
+    color: white;
+}
+
+
