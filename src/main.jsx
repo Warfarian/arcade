@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import ErrorPage from './pages/ErrorPage.jsx'
 import App from './App.jsx'
-import Shop from './pages/Shop.jsx'
+import Card from './pages/Shop.jsx'
 import Cart from './pages/Cart.jsx'
 
 const router = createBrowserRouter([
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     },
     {
       path: '/shop',
-      element: <Shop />
+      element: <Card />
     },
     {
       path: '/cart',
