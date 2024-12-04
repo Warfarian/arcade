@@ -22,14 +22,33 @@
 
 
 body{
-    background:             
-    linear-gradient(135deg, #cc007d, #099fa3, #2D2DFF),
-    linear-gradient(135deg, rgba(127, 90, 240, 0.15), rgba(44, 182, 125, 0.15), rgba(255, 142, 60, 0.15));
+    background-color: #080808;
     background-repeat: no-repeat;
-    background-size: 200% 200%;
+    background-size: cover;
     background-attachment: fixed;
-    height: 100vh;
+    min-height: 100vh;
     animation: gradient-animation 8s ease infinite;
+}
+
+#explore{
+    background-color: white;
+    padding: 10px;
+    height: 50px;
+    width: 110px;
+    border-radius: 8px;
+    color: black;
+    font-family: 'Press Start 2P';
+    transform: scale(1);
+    position: relative;
+    bottom: 90px;
+    cursor: pointer;
+
+}
+
+#explore:hover{
+    transform: scale(1.5);
+    background-color: var(--secondary-color);   
+    transition: .2s ease-in;
 }
 
 @keyframes gradient-animation {
@@ -44,47 +63,44 @@ body{
     }
 }
 
-nav{
+nav {
     display: flex;
     justify-content: flex-start;
     height: 12vh;
-    background: linear-gradient(135deg, #08081A, #12122A);
-    opacity: .9;
+    background: linear-gradient(135deg, #121212, #080808);
+    opacity: 0.95;
     align-items: center;
-    border-bottom: 5px solid #0a0a0a; 
-    padding: 15px 20px; 
+    padding: 15px 20px;
     margin: 10px 10px;
     border-radius: 8px;
     transform: translate(0px);
-    transition: .3s ;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
-nav:hover{
+nav:hover {
     transform: translate(10px);
+    background: linear-gradient(135deg, #1a1a1a, #101010);
 }
 
-.navLinks{
+.navLinks {
     padding: 25px;
     display: flex;
     gap: 3rem;
     font-size: large;
 }
 
-
-.navBar a{
-    color: var(--primary-color);
+.navBar a {
+    color: white;
     display: flex;
     margin: 10px;
     text-decoration: none;
 }
 
-.navBar a:hover{
+.navBar a:hover {
     color: var(--secondary-color);
-    display: flex;
-    margin: 10px;
-    text-decoration: underline;
+    text-shadow: 0 0 10px var(--secondary-color);
     transform: scale(1.5);
-    transition: .2s ease-in-out;
+    transition: 0.2s ease-in-out;
 }
 
 
@@ -159,6 +175,15 @@ footer{
 #github a{
     text-decoration: none;
     color: white;
+    position:relative;
+    transform: scale(1);
+    bottom: 120px;
+}
+
+#github a:hover{
+    color: #0cf4ec;
+    transform: scale(2);
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cartLogo from "../assets/grocery.gif"
 
 export default function Cart(){
     return(
@@ -10,6 +11,7 @@ export default function Cart(){
             <li><Link to='cart'>Cart</Link></li>
         </ul>
     </nav>
+    {/* add shopping cart gif thing here */}
         </>
     );
 }

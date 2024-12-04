@@ -12,15 +12,16 @@ export default function HomePage(){
         </ul>
     </nav>
     <div className="container" style={{
-    backgroundImage: "url('https://steamuserimages-a.akamaihd.net/ugc/790858329433082572/7AFB90944739524B66E931AC5ED409ED84BA09B6/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false')",
+    backgroundImage: "url('https://files.peakd.com/file/peakd-hive/seryi13/23wqCv6iVTxZKpreSW9mnNhftoQVhcJcJ9KiiZiY9HsL7E4Xii3L6ND876vNZu6QaAGhY.gif')",
     backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
+    backgroundSize: "contain",
     height: "150vh",
-    padding: "12px"
+    backgroundColor: 'black'
 }}
 >
         <main className="main fade-in">
             <h1 id='arcade'>A R C A D E</h1>
+            <Link to='shop'><button id = "explore">Explore</button></Link>
         </main>
     </div>
     
