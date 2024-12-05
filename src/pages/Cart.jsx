@@ -1,29 +1,24 @@
 import { Link } from "react-router-dom";
 import cartLogo from "../assets/grocery.gif"
 import '../styles/Cart.css'
-
+import creditCard from "../assets/creditCard.gif"
 
 export default function Cart(){ 
-    // const shopItem = items.map((item,index) => <li key={index} className="itemList">{item}</li>);
-
+    
     return(
         <>
      <nav className='navBar fade-in fade-out'>
         <ul className='navLinks fade-in fade-out'>
             <li><Link to='/'>Home</Link></li>
-            <li><Link to='shop'>Shop</Link></li>
-            <li><Link to='cart'>Cart</Link></li>
-            <img src={cartLogo} alt="" style={{width:"60px", height:"40px", marginLeft:"800px", filter: "invert(100%)"}} />
+            <li><Link to='/shop'>Shop</Link></li>
+            <li><Link to='/cart'>Cart</Link></li>
+            <img src={cartLogo} alt="" style={{width:"60px", height:"40px", marginLeft:"1400px", filter: "invert(100%)"}} />
         </ul>
     </nav>
 
     <div className="checkoutContainer fade-in">
-        <h1>Checkout</h1>
-        {/* <div className="checkout">
-            <ul>
-                {shopItem}
-            </ul>
-        </div> */}
+        <h1 className="paidGlow"> Payment Successful</h1>
+        <img src={creditCard} style={{filter: "invert(1)", width:"300px", marginTop: "40px"}} className="fade-in" alt="" />
     </div>
         </>
     );
