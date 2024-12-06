@@ -1,0 +1,118 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`HomePage component > Home-page renders 1`] = `
+<div>
+   
+  <nav
+    class="navBar fade-in fade-out"
+  >
+    <ul
+      class="navLinks fade-in fade-out"
+    >
+      <li>
+        <a
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    class="container"
+    style="background-image: url(https://files.peakd.com/file/peakd-hive/seryi13/23wqCv6iVTxZKpreSW9mnNhftoQVhcJcJ9KiiZiY9HsL7E4Xii3L6ND876vNZu6QaAGhY.gif); background-repeat: no-repeat; background-size: contain; height: 150vh; background-color: black;"
+  >
+    <main
+      class="main fade-in"
+    >
+      <h1
+        id="arcade"
+      >
+        A R C A D E
+      </h1>
+      <a
+        data-discover="true"
+        href="/shop"
+      >
+        <button
+          id="explore"
+        >
+          Explore
+        </button>
+      </a>
+    </main>
+  </div>
+  <footer>
+    <div
+      id="github"
+    >
+      <a
+        href="https://github.com/Warfarian/arcade"
+      >
+        Arcade Enterprises Ltd
+      </a>
+    </div>
+  </footer>
+</div>
+`;
+
+exports[`Shop component > Cart renders 1`] = `
+<div>
+  <nav
+    class="navBar fade-in fade-out"
+  >
+    <ul
+      class="navLinks fade-in fade-out"
+    >
+      <li>
+        <a
+          data-discover="true"
+          href="/"
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/shop"
+        >
+          Shop
+        </a>
+      </li>
+      <li>
+        <a
+          data-discover="true"
+          href="/cart"
+        >
+          Cart
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    class="checkoutContainer fade-in"
+  >
+    <h1
+      class="paidGlow"
+    >
+       Payment Successful
+    </h1>
+    <img
+      alt=""
+      class="success fade-in"
+      src="/src/assets/creditCard.gif"
+      style="filter: invert(1); width: 300px; margin-top: 40px;"
+    />
+  </div>
+</div>
+`;
