@@ -48,3 +48,66 @@ h1{
         text-shadow: 0 0 2px #32CD32, 0 0 4px #32CD32;
     }
 }
+
+
+/* Media queries */
+
+
+@media (min-width:700px) and (max-width: 900px){
+    .paidGlow{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width:400px) and (max-width: 700px){
+    .paidGlow{
+        font-size: 1.3rem;
+    }
+
+    img{
+        width: 100px;
+        height: 250px;
+    }
+
+}
+
+@media (min-width:300px) and (max-width: 400px){
+    .paidGlow{
+        font-size: 1rem;     
+    }
+
+    img{
+        width: 90px;
+        height: 200px;
+    }
+
+}
+
+@media (min-width:200px) and (max-width: 300px){
+
+    .paidGlow{
+        font-size: .6rem;     
+    }
+
+    .navBar{
+        display: flex;
+    }
+
+    img{
+        width: 90px;
+        height: 200px;
+    }
+
+
+    .navLinks {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center; 
+    }
+    
+    
+    .navLinks li{
+        margin: 0 auto;
+        font-size: 7px;
+    }
+}

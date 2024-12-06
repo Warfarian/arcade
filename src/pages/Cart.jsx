@@ -12,13 +12,12 @@ export default function Cart(){
             <li><Link to='/'>Home</Link></li>
             <li><Link to='/shop'>Shop</Link></li>
             <li><Link to='/cart'>Cart</Link></li>
-            <img src={cartLogo} alt="" style={{width:"60px", height:"40px", marginLeft:"1400px", filter: "invert(100%)"}} />
         </ul>
     </nav>
 
     <div className="checkoutContainer fade-in">
         <h1 className="paidGlow"> Payment Successful</h1>
-        <img src={creditCard} style={{filter: "invert(1)", width:"300px", marginTop: "40px"}} className="fade-in" alt="" />
+        <img src={creditCard} style={{filter: "invert(1)", width:"300px", marginTop: "40px"}} className="success fade-in" alt="" />
     </div>
         </>
     );

@@ -66,8 +66,8 @@ export default function Shop(){
                 <p>{price}</p>
                 <p>{rating}</p>
                 <button onClick={handleAddToCart}>Add to cart</button>
-                <button style={{width: "50px", marginLeft: "100px"}} onClick={handleAddItem}>+</button>
-                <button style={{width: "50px", marginLeft: "10px"}} onClick={handleRemoveItem}>-</button>   
+                <button id="plusBtn" style={{width: "50px", marginLeft: "100px"}} onClick={handleAddItem}>+</button>
+                <button id="minusBtn" style={{width: "50px", marginLeft: "10px"}} onClick={handleRemoveItem}>-</button>   
             </div>
         );
     }

@@ -1,6 +1,7 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
 :root{
@@ -149,60 +150,8 @@ li{
     from {opacity: 1;}
     to {opacity: 0;}
 }
-@media (max-width: 768px) {
-    #arcade {
-        font-size: 2rem;
-    }
-    #explore {
-        width: 100px;
-        bottom: 80px;
-    }
-}
 
-@media (max-width: 480px) {
-    #arcade {
-        font-size: 1rem;
-    }
 
-    #explore{
-        width: 90px;
-        bottom: 60px;
-    }
-}
-
-@media (max-width: 1100px) {
-    #arcade {
-        font-size: 4.5rem;
-        white-space: nowrap;
-        margin-left: 20px;
-        position: relative;
-        top: -200px;
-    }
-
-    #explore{
-        position: relative;
-        top: -300px;
-        font-size: 16px;
-        width: 140px;
-    }
-
-    body{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
-    footer{
-        margin: 0 auto;
-        margin-left: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position:relative;
-        top: -340px;
-    }
-}
 
 
 footer{
@@ -225,4 +174,90 @@ footer{
     transition: transform 0.3s ease, background 0.3s ease;
 }
 
+
+@media (max-width: 768px) {
+
+    #explore {
+        width: 100px;
+        bottom: 80px;
+    }
+}
+ 
+@media (min-width:200px) and (max-width: 299px){
+
+    *{
+        box-sizing: border-box;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .navLinks li{
+        display: flex;
+        font-size: .6rem;
+    }
+
+    #arcade {
+        position: relative;
+        font-size: 1.8rem; 
+        bottom: 120px;     
+        text-align: center;
+    }
+
+    #explore {
+        width: 80px;
+        height: 40px;
+        font-size: 0.4rem; 
+        bottom: 200px;     
+        margin: 0 auto;
+    }
+
+    #github a {
+        margin: 0 auto;
+        font-size: 0.4rem; 
+        bottom: 450px;     
+    }
+}
+
+
+@media (min-width: 300px) and (max-width: 450px) {
+
+    * {
+        box-sizing: border-box;
+    }
+
+    #arcade {
+        position: relative;
+        font-size: 3.3rem; 
+        bottom: 100px;     
+        text-align: center;
+    }
+
+    .navLinks li{
+        display: flex;
+        font-size: 1rem;
+    }
+
+    #explore {
+        width: 80px;
+        height: 40px;
+        font-size: 0.4rem; 
+        bottom: 200px;     
+        margin: 0 auto;
+    }
+
+    #github a {
+        margin: 0 auto;
+        font-size: 0.5rem; 
+        bottom: 250px;     
+    }
+
+    body {
+        padding: 10px; 
+    }
+}
 
