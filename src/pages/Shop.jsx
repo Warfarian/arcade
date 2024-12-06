@@ -28,22 +28,21 @@
 //     );
 // }
 
-//  EXPERIMENT HERE
 
 
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "../styles/Shop.css"
-
+import PropTypes from "prop-types";
 
 export default function Shop(){
     const [cart, setCart] = useState([]);
     const [quantity,setQuantity] = useState(0)
-
+    console.log(quantity);
 
 
 // Card component
-    function Card({name,image,id,price,rating,cart,quantity}){
+    const Card = ({name,image,id,price,rating,cart,quantity}) =>{
         let handleAddToCart = () => {
             setCart([...cart, id]);
             setQuantity((quantity) => quantity + 1);
@@ -57,7 +56,7 @@ export default function Shop(){
         let handleRemoveItem = () => {
             quantity >= 0 && setQuantity((quantity) => quantity - 1)
         }
-        
+
         return(
             <div className="card">
                 <img src={image} />
@@ -71,12 +70,13 @@ export default function Shop(){
             </div>
         );
     }
+
     let apiKey = import.meta.env.VITE_API_KEY
     
-    const [imageURL, setImageURL] = useState("https://images.unsplash.com/photo-1700154117794-277371e27705?q=80&w=1844&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
-    const [rating, setRating] = useState(4.5)
-    const [name, setName] = useState("Katana Zero");
-    const [id, setId] = useState(1)
+    // const [imageURL, setImageURL] = useState("https://images.unsplash.com/photo-1700154117794-277371e27705?q=80&w=1844&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    // // const [rating, setRating] = useState(4.5)
+    // // const [name, setName] = useState("Katana Zero");
+    // // const [id, setId] = useState(1)
     const [allItems, setAllItems] = useState([]);
     const url = `https://api.rawg.io/api/games?key=${apiKey}&dates=2022-01-01,2022-12-31&ordering=-added`
 
@@ -94,7 +94,7 @@ export default function Shop(){
                 console.error("Error fetching data:", error);
             });
     }, []);
-    
+
     const price = Math.floor(Math.random() * 100)
     
     // fallback stuff 
@@ -221,8 +221,16 @@ export default function Shop(){
         }
     ];
     
-
-
+    Card.PropTypes = {
+        name: PropTypes.string,
+        image: PropTypes.string,
+        id: PropTypes.number,
+        price: PropTypes.number,
+        rating: PropTypes.number,
+        cart: PropTypes.array,
+        quantity: PropTypes.number
+    }
+    
     return(
         <>
     <nav className='navBar fade-in fade-out'>
@@ -261,3 +269,8 @@ export default function Shop(){
             <Card image = "https://images.unsplash.com/photo-1591196702597-062a87208fed?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" item="Sonic #3" price= "4$" rating ="4.0" cart={cart} quantity={quantity}/>
             <Card image="https://plus.unsplash.com/premium_photo-1687854992749-e15cba89631d?q=80&w=1854&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" item="Super Mario #4" price= "4$" rating ="4.0" cart={cart} quantity={quantity}/> */}
         
+
+
+
+        
+            

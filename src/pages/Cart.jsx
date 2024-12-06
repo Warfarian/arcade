@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import cartLogo from "../assets/grocery.gif"
 import '../styles/Cart.css'
 import creditCard from "../assets/creditCard.gif"
 
